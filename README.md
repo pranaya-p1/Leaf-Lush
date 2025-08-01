@@ -1,7 +1,7 @@
 # Project Definition – Leaf & Lush
 
 ## Purpose
-Leaf & Lush is a gardening-themed social networking web application designed to make gardening easy and accessible for young people. It allows users to share tips, post videos, participate in contests, buy and sell garden-related items, and track plant growth using personal dashboards. Our goal is to create a supportive online gardening community.
+Leaf & Lush is a gardening-themed social networking web application designed to make gardening easy and accessible for young people. It allows users to share tips, post videos, participate in contests, and track plant growth using personal dashboards. Our goal is to create a supportive online gardening community.
 
 ## Functional Requirements (What the app will do)
 - Users can create an account and log in
@@ -9,7 +9,6 @@ Leaf & Lush is a gardening-themed social networking web application designed to 
 - Users can post gardening tips, images, and videos
 - Users can read newsletters on gardening topics
 - Users can enter gardening contests
-- Users can buy/sell garden-related goods through the platform
 - Users can complete “quests” (gamified gardening challenges)
 - Users can flag/report misinformation
 - Admins can approve expert-verified posts
@@ -28,8 +27,8 @@ The core features like posting, dashboards, and contests are achievable within 1
 
 ## Scope Issues
 Some advanced features such as:
-- Buying and selling with payment integration
 - Full encryption and security features
 - Complex admin/moderation tools  
 ...may not be completed in full due to the time constraint, but we will include basic mockups or simplified versions.
+
 
