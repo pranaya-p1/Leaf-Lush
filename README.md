@@ -1,7 +1,7 @@
 # Project Definition – Leaf & Lush
 
 ## Purpose
-Leaf & Lush is a gardening-themed social networking web application designed to make gardening easy and accessible for young people. It allows users to share tips, post videos, participate in contests, and track plant growth using personal dashboards. Our goal is to create a supportive online gardening community.
+**Leaf & Lush** is a gardening-themed social networking web application designed to make gardening easy and accessible for young people. It allows users to share tips, post videos, participate in contests, and track plant growth using personal dashboards. Our goal is to create a supportive online gardening community.
 
 ## Functional Requirements (What the app will do)
 - Users can create an account and log in
@@ -26,9 +26,46 @@ Leaf & Lush is a gardening-themed social networking web application designed to 
 The core features like posting, dashboards, and contests are achievable within 10 weeks. We will start with basic versions of each feature and develop them further if time allows.
 
 ## Scope Issues
-Some advanced features such as:
+**Some advanced features such as:**
 - Full encryption and security features
 - Complex admin/moderation tools  
 ...may not be completed in full due to the time constraint, but we will include basic mockups or simplified versions.
 
+# Project Task 2  : Basic Design of UI, Hierachy and Interactive Elements  
+## Changes
+After reviewing the previous UI Design form last year, i decided to change the colour scheme to make it more engaging and visually appealing. 
+
+## My Inspiration:
+I beleived that these **contrasting colours** was more effective while still sticking to the **Gardening Theme.**
+
+![alt text](<colour scheme.png>)
+
+
+## Before vs After
+The **previous colour pallete** and design seemed to be dull and not catchy to the eye. The logo was also simple and didn't **effectively compliment the website.** 
+
+![alt text](<before colour.png>)
+![alt text](image.png)
+
+After implementing new colours, the UI design was much better. 
+
+![alt text](<after colour.png>)
+![alt text](logo-2.png)
+
+## Current Design
+**Homepage:**
+
+![alt text](homepage.png)
+
+**Events Page:**
+
+![alt text](<events page.png>)
+
+**Sign Up Page:**
+
+![alt text](<sign up page.png>)
+
+**Dashboard Page:**
+
+![alt text](<dashboard page.png>)
 
