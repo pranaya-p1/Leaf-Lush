@@ -67,5 +67,30 @@ After implementing new colours, the UI design was much better.
 
 **Dashboard Page:**
 
-![alt text](<dashboard page.png>)
+![Dashboard](<dashboard page.png>)
 
+
+# Project Task 3 - Alternative Design - Playing with Possibilities
+
+## Client Feedback
+ - Add an option to change login and profile information
+ - Create a more minimalist dsign
+ - Create more rounded and smaller buttons
+ - Move headings to the centre rather than the side 
+ - Add a searchbar icon
+
+## Design Choices
+| Design Element   | Choice                                                      |
+| ---------------- | ----------------------------------------------------------- |
+| Colour Palette   | Garden Green (#86C232), Grey (#474B4F), Jet Black (#000000), White(#FFFFFF) |
+| Typography       | Heading: Newsreader, Lexend, Body: Inter                    |
+| Image/Icon Style | AI-generated images, Figma Icons & Assets                   |
+
+## Alternative Design Prototype
+**HomePage:**
+![alt text](Homepage-1.png)
+
+**Events Page:**
+![alt text](Events.png)
+
+The Sign-Up Page and Dashboard have a similar layout, however the header is changed to match the other pages. 
