@@ -87,10 +87,42 @@ After implementing new colours, the UI design was much better.
 | Image/Icon Style | AI-generated images, Figma Icons & Assets                   |
 
 ## Alternative Design Prototype
+
+The Sign-Up Page and Dashboard have a similar layout, however the header is changed to match the other pages.  
+
 **HomePage:**
-![alt text](Homepage-1.png)
+
+![Homepage Image](Homepage-1.png)
 
 **Events Page:**
-![alt text](Events.png)
 
-The Sign-Up Page and Dashboard have a similar layout, however the header is changed to match the other pages. 
+![Eventspage image](Events.png)
+
+
+
+# Project Task 4 - Designing Algorithms
+
+## Flowchart
+![Flowchart](Flowchart-1.png)
+
+## Pseudocode
+1. User clicks "Add Plant" button
+2. Prompt user to upload plant photo
+   - If no photo → show error and go back
+3. Prompt user to enter:
+   - Latin Name
+   - Short Bio
+   - Fruits Produced? (Yes/No)
+   - Fun Fact
+4. Validate all fields
+   - If missing → show error and go back
+5. Save details to database
+6. Display new plant card on dashboard
+
+## Test Cases
+###  Add Plant to Dashboard
+
+| Test Case ID | Feature Being Tested     | Input                                                                                                                                             | Expected Output                                                  |
+|--------------|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+| TC001        | Add Plant to Dashboard   | **Photo**: rose.jpg, **Latin Name**: *Rosa chinensis*, **Bio**: "A beautiful rose plant", **Fruits**: No, **Fun Fact**: "Symbol of love"           | Plant card appears on dashboard with uploaded image and details |
+| TC002        | Add Plant to Dashboard   | **Photo**: _(none)_, **Latin Name**: *Ocimum basilicum*, **Bio**: "Basil plant for cooking", **Fruits**: Yes, **Fun Fact**: "Great in pasta"       | Error message: "Please upload a plant photo"                    |
