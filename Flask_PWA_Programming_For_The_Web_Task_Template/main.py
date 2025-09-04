@@ -3,6 +3,7 @@ from flask import render_template
 from flask import request
 import database_manager as dbHandler
 
+
 app = Flask(__name__)
 
 @app.route('/index.html', methods=['GET'])
