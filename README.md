@@ -49,7 +49,7 @@ The **previous colour pallete** and design seemed to be dull and not catchy to t
 
 After implementing new colours, the UI design was much better. 
 
-![alt text](<after colour.png>)
+![alt text](image-1.png)
 ![alt text](logo-2.png)
 
 ## Current Design

@@ -1,0 +1,130 @@
+-- database: ./data_source.db
+
+-- Create Users table
+CREATE TABLE Users (
+  userID INTEGER PRIMARY KEY,
+  username TEXT NOT NULL,
+  email TEXT NOT NULL,
+  password TEXT NOT NULL
+);
+
+-- Create Plants table
+CREATE TABLE Plants (
+  plantID INTEGER PRIMARY KEY,
+  userID INTEGER,
+  photo TEXT,
+  bio TEXT,
+  fruits TEXT,
+  funFact TEXT,
+  FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+
+SELECT name FROM sqlite_master WHERE type='table';
+
+INSERT INTO Users (username, email, password) VALUES
+('AliceGreen', 'alice.green@example.com', 'pass123'),
+('BobSmith', 'bob.smith@example.com', 'plantsrock'),
+('CharlieBrown', 'charlie.brown@example.com', 'nature4life'),
+('DianaRose', 'diana.rose@example.com', 'iloveplants'),
+('EthanWoods', 'ethan.woods@example.com', 'greenworld'),
+('FionaLeaf', 'fiona.leaf@example.com', '123456'),
+('GeorgeHill', 'george.hill@example.com', 'password1'),
+('HannahStone', 'hannah.stone@example.com', 'sunnyday'),
+('IsaacRiver', 'isaac.river@example.com', 'plantsarecool'),
+('JasmineSky', 'jasmine.sky@example.com', 'rosebud'),
+('KevinForest', 'kevin.forest@example.com', 'letsgrow'),
+('LauraBloom', 'laura.bloom@example.com', 'plantlover'),
+('MasonEarth', 'mason.earth@example.com', '123plant'),
+('NinaBranch', 'nina.branch@example.com', 'growwithme'),
+('OliverPark', 'oliver.park@example.com', 'myplants123'),
+('PaulaLake', 'paula.lake@example.com', 'plantpass'),
+('QuinnStar', 'quinn.star@example.com', 'treelover'),
+('RachelField', 'rachel.field@example.com', 'sunshine'),
+('SamCarter', 'sam.carter@example.com', 'green123'),
+('TinaFlower', 'tina.flower@example.com', 'password2'),
+('UmaGarden', 'uma.garden@example.com', 'happyplants'),
+('VictorStone', 'victor.stone@example.com', 'earthling'),
+('WendySun', 'wendy.sun@example.com', 'plantsun'),
+('XavierMoon', 'xavier.moon@example.com', 'moonplant'),
+('YaraForest', 'yara.forest@example.com', 'earthlife'),
+('ZackLeaf', 'zack.leaf@example.com', 'growplants'),
+('AnnaTree', 'anna.tree@example.com', 'treelife'),
+('BenFlower', 'ben.flower@example.com', 'plantpass1'),
+('ClaraRain', 'clara.rain@example.com', 'raindrop'),
+('DavidStone', 'david.stone@example.com', 'greenleaf'),
+('EllaRiver', 'ella.river@example.com', 'waterme'),
+('FrankSun', 'frank.sun@example.com', 'sunshine2'),
+('GraceHill', 'grace.hill@example.com', 'hilltop'),
+('HarryBloom', 'harry.bloom@example.com', 'plantmagic'),
+('IslaPark', 'isla.park@example.com', 'growgrow'),
+('JackWoods', 'jack.woods@example.com', 'treehugger'),
+('KaraSky', 'kara.sky@example.com', 'cloudyday'),
+('LeoBranch', 'leo.branch@example.com', 'branchout'),
+('MiaEarth', 'mia.earth@example.com', 'earthday'),
+('NoahGarden', 'noah.garden@example.com', 'gardenlife'),
+('OliviaLake', 'olivia.lake@example.com', 'lakelover'),
+('PeterField', 'peter.field@example.com', 'fieldwork'),
+('QueenieRose', 'queenie.rose@example.com', 'roses4me'),
+('RileyStone', 'riley.stone@example.com', 'stonelife'),
+('SophiaBloom', 'sophia.bloom@example.com', 'blooms123'),
+('TomCarter', 'tom.carter@example.com', 'greenthumb'),
+('UrsulaLeaf', 'ursula.leaf@example.com', 'leafmealone'),
+('VeraSun', 'vera.sun@example.com', 'sunnydayz'),
+('WillowMoon', 'willow.moon@example.com', 'nightplant');
+
+
+
+INSERT INTO Plants (userID, photo, bio, fruits, funFact) VALUES
+(1, 'rose.jpg', 'A rose bush in bloom', 'No', 'Roses are one of the oldest flowers.'),
+(2, 'basil.jpg', 'Fresh basil plant', 'Yes', 'Basil is considered the king of herbs.'),
+(3, 'mint.jpg', 'Mint growing in a pot', 'Yes', 'Mint keeps away ants and flies.'),
+(4, 'sunflower.jpg', 'Tall sunflower facing the sun', 'No', 'Sunflowers can grow up to 3m tall.'),
+(5, 'lavender.jpg', 'Lavender plant in the garden', 'No', 'Lavender is used to make essential oils.'),
+(6, 'tomato.jpg', 'Tomato plant with ripe fruit', 'Yes', 'Tomatoes are technically a fruit.'),
+(7, 'cactus.jpg', 'Small cactus in a clay pot', 'No', 'Cacti can survive years without water.'),
+(8, 'fern.jpg', 'Fern plant with wide leaves', 'No', 'Ferns are among the oldest plant species.'),
+(9, 'orchid.jpg', 'Pink orchid flower', 'No', 'Orchids are the largest family of plants.'),
+(10, 'appletree.jpg', 'Apple tree with blossoms', 'Yes', 'Apple trees take 4–5 years to fruit.'),
+(11, 'peppermint.jpg', 'Peppermint sprouting', 'Yes', 'Peppermint helps digestion.'),
+(12, 'lemon.jpg', 'Lemon tree sapling', 'Yes', 'One lemon tree can produce 600 lbs of lemons annually.'),
+(13, 'strawberry.jpg', 'Strawberry plant', 'Yes', 'Strawberries are the only fruit with seeds on the outside.'),
+(14, 'potato.jpg', 'Potato plant underground', 'Yes', 'Potatoes were the first vegetable grown in space.'),
+(15, 'daisy.jpg', 'Daisy flowers in bloom', 'No', 'Daisies symbolize innocence.'),
+(16, 'mango.jpg', 'Mango tree sapling', 'Yes', 'Mango is the national fruit of India.'),
+(17, 'spinach.jpg', 'Spinach leaves sprouting', 'Yes', 'Spinach is rich in iron.'),
+(18, 'pine.jpg', 'Pine tree with cones', 'No', 'Pine trees are evergreen.'),
+(19, 'grapevine.jpg', 'Grapevine climbing trellis', 'Yes', 'Grapes are one of the oldest cultivated fruits.'),
+(20, 'cherry.jpg', 'Cherry blossom tree', 'No', 'Cherry blossoms bloom for just 1–2 weeks.'),
+(21, 'fig.jpg', 'Fig tree with green leaves', 'Yes', 'Figs were one of the first domesticated crops.'),
+(22, 'almond.jpg', 'Almond tree sapling', 'Yes', 'Almonds are seeds, not true nuts.'),
+(23, 'pear.jpg', 'Pear tree growing fruits', 'Yes', 'There are over 3000 pear varieties worldwide.'),
+(24, 'pumpkin.jpg', 'Pumpkin vine spreading', 'Yes', 'Pumpkins are 90% water.'),
+(25, 'rose2.jpg', 'Mini rose plant in pot', 'No', 'Roses are related to apples and cherries.'),
+(26, 'blueberry.jpg', 'Blueberry bush', 'Yes', 'Blueberries are one of the few naturally blue foods.'),
+(27, 'cabbage.jpg', 'Cabbage plant in garden', 'Yes', 'Cabbage is over 4000 years old.'),
+(28, 'carrot.jpg', 'Carrot leaves above soil', 'Yes', 'Carrots were originally purple.'),
+(29, 'olive.jpg', 'Olive tree sapling', 'Yes', 'Olive trees can live 1000+ years.'),
+(30, 'palm.jpg', 'Palm tree on beach', 'No', 'Coconuts float across oceans to spread.'),
+(31, 'onion.jpg', 'Onion bulb sprouting', 'Yes', 'Onions were used by ancient Egyptians as currency.'),
+(32, 'peach.jpg', 'Peach tree sapling', 'Yes', 'Peaches originated in China.'),
+(33, 'plum.jpg', 'Plum tree branch', 'Yes', 'Plums are related to peaches and cherries.'),
+(34, 'kiwi.jpg', 'Kiwi vine growing', 'Yes', 'Kiwi fruits were originally called “Chinese gooseberries.”'),
+(35, 'pomegranate.jpg', 'Pomegranate tree', 'Yes', 'Pomegranates have about 600 seeds each.'),
+(36, 'walnut.jpg', 'Walnut tree', 'Yes', 'Walnuts are the oldest tree food known to man.'),
+(37, 'broccoli.jpg', 'Broccoli plant', 'Yes', 'Broccoli is actually a flower.'),
+(38, 'avocado.jpg', 'Avocado tree sapling', 'Yes', 'Avocados are berries.'),
+(39, 'rose3.jpg', 'Climbing rose plant', 'No', 'There are over 300 rose species.'),
+(40, 'bamboo.jpg', 'Bamboo stalks', 'No', 'Bamboo is the fastest growing plant.'),
+(41, 'chili.jpg', 'Chili plant with red peppers', 'Yes', 'Chilis originated in Mexico.'),
+(42, 'beetroot.jpg', 'Beetroot plant', 'Yes', 'Beet juice was once used as dye.'),
+(43, 'cotton.jpg', 'Cotton plant with bolls', 'Yes', 'Cotton is the most used natural fiber.'),
+(44, 'melon.jpg', 'Melon vine with fruits', 'Yes', 'Watermelons are 92% water.'),
+(45, 'coriander.jpg', 'Coriander herb sprouting', 'Yes', 'Coriander is called cilantro in the US.'),
+(46, 'rose4.jpg', 'Wild rose in forest', 'No', 'Rose hips contain more vitamin C than oranges.'),
+(47, 'ginger.jpg', 'Ginger root plant', 'Yes', 'Ginger is technically a rhizome.'),
+(48, 'tea.jpg', 'Tea bush in field', 'Yes', 'Tea is the second most consumed drink after water.'),
+(49, 'garlic.jpg', 'Garlic bulb sprouting', 'Yes', 'Garlic was fed to workers building the pyramids.');
+
+
+DELETE FROM Users;
+DELETE FROM Plants;
