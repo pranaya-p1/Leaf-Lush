@@ -38,36 +38,36 @@ After reviewing the previous UI Design form last year, i decided to change the c
 ## My Inspiration:
 I beleived that these **contrasting colours** was more effective while still sticking to the **Gardening Theme.**
 
-![alt text](<colour scheme.png>)
+![alt text](image.png)
 
 
 ## Before vs After
 The **previous colour pallete** and design seemed to be dull and not catchy to the eye. The logo was also simple and didn't **effectively compliment the website.** 
 
-![alt text](<before colour.png>)
-![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
 
 After implementing new colours, the UI design was much better. 
 
-![alt text](image-1.png)
-![alt text](logo-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
 
 ## Current Design
 **Homepage:**
 
-![alt text](homepage.png)
+![alt text](image-5.png)
 
 **Events Page:**
 
-![alt text](<events page.png>)
+![alt text](image-6.png)
 
 **Sign Up Page:**
 
-![alt text](<sign up page.png>)
+![alt text](image-7.png)
 
 **Dashboard Page:**
 
-![Dashboard](<dashboard page.png>)
+![alt text](image-8.png)
 
 
 # Project Task 3 - Alternative Design - Playing with Possibilities
@@ -92,18 +92,18 @@ The Sign-Up Page and Dashboard have a similar layout, however the header is chan
 
 **HomePage:**
 
-![Homepage Image](Homepage-1.png)
+![alt text](image-9.png)
 
 **Events Page:**
 
-![Eventspage image](Events.png)
+![alt text](image-10.png)
 
 
 
 # Project Task 4 - Designing Algorithms
 
 ## Flowchart
-![Flowchart](Flowchart-1.png)
+![alt text](image-11.png)
 
 ## Pseudocode
 1. User clicks "Add Plant" button
