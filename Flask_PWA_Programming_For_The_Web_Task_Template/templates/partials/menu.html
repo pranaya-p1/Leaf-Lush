@@ -1,9 +1,16 @@
 <nav>
-  <img src="static\images\logo.png" alt="VSCode Extensions site logo." />
-  <h1>Leaf & Lush</h1>
-  <ul class="topnav">
-    <li><a href="#">Home</a></li>
-    <li><a href="add.html">Add me</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>
+  <div class="nav-top">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Leaf & Lush logo" class="logo">
+    <h1>Leaf & Lush</h1>
+  </div>
+  <div class="nav-bottom">
+    <ul>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('events') }}">Events</a></li>
+      <li><a href="{{ url_for('posts') }}">Posts</a></li>
+      <li><a href="{{ url_for('dashboard') }}">My Dashboard</a></li>
+      <li><a href="#" class="btn login-btn">Login</a></li>
+    </ul>
+  </div>
 </nav>
+

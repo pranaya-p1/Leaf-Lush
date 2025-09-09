@@ -23,6 +23,7 @@ def listPlants():
     con.close()
     return data
 
+
 def listExtension():
     return listPlants()   # or listTables(), depending on what you want
 

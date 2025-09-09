@@ -1,17 +1,56 @@
-{% extends 'layout.html' %} {% block content %}
-<div class="container">{% for row in content %}
-<div class="card">
-  <img
-    class="card-image"
-    src="{{ row[4] }}"
-    alt="Product image for the {{ row[1] }} VSCode extension."
-  />
-  <h1 class="card-name">{{ row[1] }}</h1>
-  <p class="card-about">{{ row[3] }}</p>
-  <a class="card-link" href="{{ row[2] }}"
-    ><button class="btn">Read More</button></a
-  >
-</div>
-{% endfor %}
-</div>
+{% extends 'layout.html' %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+  <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Garden hero image" class="hero-img">
+  <div class="hero-text">
+    <h2>Where <em>every leaf</em> 🍃 <br>🌿 tells a story...</h2>
+    <a href="{{ url_for('posts') }}" class="btn">View Posts</a>
+  </div>
+</section>
+
+<!-- Membership Section -->
+<section class="membership">
+  <div class="membership-content">
+    <h2>Join millions of gardens!<br>Become a member today!</h2>
+    <a href="#" class="btn">Sign Up!</a>
+  </div>
+  <img src="{{ url_for('static', filename='images/member.jpg') }}" alt="Membership image">
+</section>
+
+<!-- Recipe Section -->
+<section class="recipe">
+  <img src="{{ url_for('static', filename='images/salad.jpg') }}" alt="Garden Salad">
+  <div class="recipe-info">
+    <h3>Healthy Garden Salad Recipe</h3>
+    <p><em>from a source you can trust!</em></p>
+    <span>- Sarah Gilbert</span><br>
+    <a href="#" class="btn">View Recipes</a>
+  </div>
+</section>
+
+<!-- Posts Section -->
+<section class="posts">
+  <h2>Posts</h2>
+  <div class="post-card">
+    <img src="{{ url_for('static', filename='images/bean.jpg') }}" alt="Bean Plant">
+    <div class="post-info">
+      <h3>First Results Of My Bean Plant!</h3>
+      <p><strong>Day 13</strong></p>
+      <p>by Emma Blankship</p>
+      <a href="{{ url_for('posts') }}" class="btn">View Posts</a>
+    </div>
+  </div>
+</section>
+
+<!-- Sponsors -->
+<footer class="sponsors">
+  <h2>Sponsors</h2>
+  <div class="sponsor-logos">
+    <img src="{{ url_for('static', filename='images/sponsor1.png') }}" alt="Garden Goals Sponsor">
+    <img src="{{ url_for('static', filename='images/sponsor2.png') }}" alt="Final Touch Sponsor">
+  </div>
+</footer>
+
 {% endblock %}
