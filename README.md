@@ -133,7 +133,7 @@ This week I started setting up the homepage for the Leaf & Lush website.
 At first, it felt a bit overwhelming because I wasn’t sure how all the files connected together, but once I got the layout and index pages linked, things started to make sense.  
 I added a garden image and some placeholder sections just to see how the structure would look. It was really satisfying to finally see the first version of the site come together, even if it was super basic.  
 
----
+
 
 ## Week 6 – First Issues  
 When I tried to add more features, I ran into a bunch of errors. Images wouldn’t load properly, and some of the links weren’t working.  
@@ -141,7 +141,6 @@ I also had a lot of trouble with the navigation bar at the top — it just didn�
 I wanted the logo and title in the middle, with the menu links below, but they kept ending up in the wrong place.  
 It took a lot of trial and error (and frustration), but eventually I managed to get it closer to what I wanted.  
 
----
 
 ## Week 7/8 – Making Changes  
 After showing my progress, I got some feedback to make the site match the original design more closely.  
@@ -149,7 +148,7 @@ I spent time changing the background to black, adding boxes behind text, and str
 Some of these changes worked smoothly, but others broke the layout and I had to undo them.  
 The homepage slowly started looking more professional, and I was really happy when the garden image finally looked right across the screen.  
 
----
+
 
 ## Entry 9 – Recent Progress  
 Over the last week, I’ve been refining smaller details.  
