@@ -22,11 +22,11 @@ nav {
 
 .nav-top {
   display: flex;
-  justify-content: center; /* centers logo + text */
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #000; /* thinner black line */
+  border-bottom: 1px solid #000;
 }
 
 .logo {
@@ -37,15 +37,14 @@ nav {
   font-family: "Newsreader", serif;
   font-size: 1.8rem;
   color: #000;
-  margin: 0;
 }
 
 .nav-bottom ul {
   list-style: none;
   display: flex;
-  justify-content: center; /* keep links together */
-  gap: 2.5rem; /* control spacing between links */
-  margin: 0.5rem 0 0;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 0.8rem 0 0; /* slightly lower */
   padding: 0;
 }
 
@@ -54,7 +53,6 @@ nav {
   font-weight: 600;
   font-size: 1rem;
   color: #000;
-  padding: 0.5rem 1rem;
 }
 
 .nav-bottom li a:hover {
@@ -69,8 +67,6 @@ nav {
   padding: 0.4rem 1rem;
 }
 
-
-
 /* Hero Section */
 .hero {
   position: relative;
@@ -79,9 +75,10 @@ nav {
 
 .hero-img {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
-  filter: brightness(70%);
+  height: auto; /* show full image */
+  max-height: 600px; /* prevent giant scaling */
+  object-fit: contain; /* no crop */
+  display: block;
 }
 
 .hero-text {
@@ -93,70 +90,174 @@ nav {
   font-size: 2.5rem;
 }
 
-/* Sections */
-section {
-  max-width: 1200px;
-  margin: 2rem auto;
-  text-align: center;
-}
-
-.membership,
-.recipe,
-.posts {
-  padding: 2rem;
-}
-
-.post-card {
-  background: linear-gradient(135deg, #2e7d32, #1b5e20);
-  border-radius: 12px;
-  padding: 1.5rem;
-  color: #fff;
-  max-width: 600px;
-  margin: 1rem auto;
+/* Membership Section */
+.membership {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+  background: #111;
+  border-bottom: 2px solid #86c232;
+}
+
+.membership img {
+  max-width: 45%;
+  border-radius: 8px;
+  margin-right: 2rem;
+}
+
+.membership-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  color: #000;
+  max-width: 50%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; /* match height with image */
+}
+
+.membership-content h2 {
+  font-family: "Newsreader", serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.membership-content h2 strong {
+  font-weight: 700;
+}
+
+.membership-content .btn {
+  margin-top: 1rem;
+}
+
+/* Recipe Section */
+.recipe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: #000; /* black background */
+}
+
+.recipe img {
+  max-width: 40%;
+  margin-right: 2rem;
+  border-radius: 8px;
+}
+
+.recipe-info {
+  text-align: left;
+}
+
+.recipe-info h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-family: "Newsreader", serif;
+}
+
+.recipe-info p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-info span {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.recipe-info .btn {
+  margin-left: 0;
+}
+
+/* Posts Section */
+.posts {
+  padding: 3rem;
+  text-align: center;
+}
+
+.posts h2 {
+  font-family: "Newsreader", serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.post-card {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  border-radius: 12px;
+  overflow: hidden;
+  color: #fff;
 }
 
 .post-card img {
-  width: 150px;
-  border-radius: 8px;
-  margin-right: 1.5rem;
+  width: 50%; /* left half */
+  object-fit: cover;
 }
 
-/* Sponsors */
-.sponsors {
+.post-info {
+  width: 50%; /* right half */
   padding: 2rem;
-  background: #111;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.post-info p,
+.post-info a {
+  margin-bottom: 1rem;
+}
+
+/* Sponsors Section */
+.sponsors {
+  padding: 3rem;
+  background: #fff;
+  text-align: center;
+  border-top: 2px solid #86c232; /* green separator above */
+}
+
+.sponsors h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
 }
 
 .sponsor-logos {
   display: flex;
   justify-content: center;
-  gap: 3rem;
-  margin-top: 1rem;
+  gap: 5rem;
 }
 
 .sponsor-logos img {
-  height: 50px;
+  height: 120px; /* bigger logos */
 }
 
 /* Buttons */
 .btn {
   display: inline-block;
-  border: none;
-  background: #86c232; /* garden green */
+  background: #86c232;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
   padding: 0.5rem 1.5rem;
   color: #000;
   font-weight: bold;
-  text-decoration: none; /* removes underline */
+  text-decoration: none;
   transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background: #6aaa28; /* darker hover green */
+  background: #6aaa28;
   color: #fff;
 }

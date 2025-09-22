@@ -126,3 +126,34 @@ The Sign-Up Page and Dashboard have a similar layout, however the header is chan
 |--------------|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
 | TC001        | Add Plant to Dashboard   | **Photo**: rose.jpg, **Latin Name**: *Rosa chinensis*, **Bio**: "A beautiful rose plant", **Fruits**: No, **Fun Fact**: "Symbol of love"           | Plant card appears on dashboard with uploaded image and details |
 | TC002        | Add Plant to Dashboard   | **Photo**: _(none)_, **Latin Name**: *Ocimum basilicum*, **Bio**: "Basil plant for cooking", **Fruits**: Yes, **Fun Fact**: "Great in pasta"       | Error message: "Please upload a plant photo"                    |
+
+
+## Week 5 
+This week I started setting up the homepage for the Leaf & Lush website.  
+At first, it felt a bit overwhelming because I wasn’t sure how all the files connected together, but once I got the layout and index pages linked, things started to make sense.  
+I added a garden image and some placeholder sections just to see how the structure would look. It was really satisfying to finally see the first version of the site come together, even if it was super basic.  
+
+---
+
+## Week 6 – First Issues  
+When I tried to add more features, I ran into a bunch of errors. Images wouldn’t load properly, and some of the links weren’t working.  
+I also had a lot of trouble with the navigation bar at the top — it just didn’t want to look the way I imagined.  
+I wanted the logo and title in the middle, with the menu links below, but they kept ending up in the wrong place.  
+It took a lot of trial and error (and frustration), but eventually I managed to get it closer to what I wanted.  
+
+---
+
+## Week 7/8 – Making Changes  
+After showing my progress, I got some feedback to make the site match the original design more closely.  
+I spent time changing the background to black, adding boxes behind text, and stretching sections so they filled the screen properly.  
+Some of these changes worked smoothly, but others broke the layout and I had to undo them.  
+The homepage slowly started looking more professional, and I was really happy when the garden image finally looked right across the screen.  
+
+---
+
+## Entry 9 – Recent Progress  
+Over the last week, I’ve been refining smaller details.  
+I adjusted the “Join millions of gardens!” section so it lined up with the image, added a coloured box behind the text, and made the “Posts” section larger with more space for images and text.  
+The sponsor section also looks cleaner now with a white background and bigger logos.  
+Not everything worked perfectly the first time, but by testing and adjusting, I’m starting to feel like the homepage is finally coming together the way I pictured it.  
+I also started designing and creating the Posts and Event web pages. It's not completely refined and polished at the moment, but some of the elements are starting to come together. 
