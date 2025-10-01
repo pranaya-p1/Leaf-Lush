@@ -156,3 +156,10 @@ I adjusted the “Join millions of gardens!” section so it lined up with the i
 The sponsor section also looks cleaner now with a white background and bigger logos.  
 Not everything worked perfectly the first time, but by testing and adjusting, I’m starting to feel like the homepage is finally coming together the way I pictured it.  
 I also started designing and creating the Posts and Event web pages. It's not completely refined and polished at the moment, but some of the elements are starting to come together. 
+
+## Holidays Week 1 Entry 
+This week I aimed to add first some interactive elements to the webpage before ensuring it looks pretty. 
+At the beginning, I stuggled to get the buttons to link to a new page as there was am error that kept popping up. Then I realised I could use the same format as all my other buttons, and that seemed to fix the issue. Styling the HTML for the sign up page was a bit harder as I wanted there to be a thin green box around everything which matched my prototype design on Figma. 
+My favourite part was probably getting the right font for the text. It matched the overall website theme and looked great on the website. 
+I also worked a bit on refining my homepage, such as the size and style of the buttons to ensure they look consistent among the webpage. I also edited the Heading font to Newsreader. It looked very boring before and I was struggling to find a font that looked similar to the one on Figma. However, now that I have changed it, the whole webpage looks much more visually appealing. 
+The page is not completely refined right now as the typing boxes are sitting quite low on the page, with a lot of blank space at the top. But I will be fixing that soon. 
