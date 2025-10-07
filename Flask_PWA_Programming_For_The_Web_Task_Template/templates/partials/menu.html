@@ -8,7 +8,16 @@
       <li><a href="{{ url_for('index') }}">Home</a></li>
       <li><a href="{{ url_for('events') }}">Events</a></li>
       <li><a href="{{ url_for('posts') }}">Posts</a></li>
-      <li><a href="{{ url_for('dashboard') }}">My Dashboard</a></li>
+
+      <!-- Dashboard link with session check -->
+      <li>
+        {% if session.get('username') %}
+          <a href="{{ url_for('dashboard', username=session['username']) }}">My Dashboard</a>
+        {% else %}
+          <a href="{{ url_for('login') }}">My Dashboard</a>
+        {% endif %}
+      </li>
+
       <li><a href="{{ url_for('login') }}" class="btn login-btn">Login</a></li>
     </ul>
   </div>

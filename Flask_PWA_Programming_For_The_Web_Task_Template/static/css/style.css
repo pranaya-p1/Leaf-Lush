@@ -271,28 +271,29 @@ nav {
   background: #000;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 2rem;
+  align-items: flex-start; /* push content to top */
+  padding-top: 5rem; /* space below navbar */
 }
 
 .auth-box {
-  border: 2px solid #86c232; /* green outline around everything */
+  border: 2px solid #86c232; /* bright green border */
   border-radius: 8px;
   padding: 2rem;
   width: 60%;
   max-width: 700px;
-  background: rgba(20, 20, 20, 0.95); /* dark box background */
+  background: rgba(10, 10, 10, 0.95); /* subtle black background */
   text-align: center;
 }
 
 .auth-title {
   font-family: "Newsreader", serif;
   font-size: 2rem;
-  color: #fff;
+  color: #86c232; /* bright green title */
   margin-bottom: 1.5rem;
 }
 
+/* Form */
 .auth-box form {
   display: flex;
   flex-direction: column;
@@ -301,20 +302,376 @@ nav {
 
 .auth-box input {
   padding: 0.8rem;
-  border: 1px solid #86c232;
+  border: 2px solid #86c232; /* bright green border */
   border-radius: 5px;
-  background: #000;
-  color: #fff;
+  background: #111; /* darker green/black fill */
+  color: #86c232; /* green text */
   font-size: 1rem;
   outline: none;
 }
 
 .auth-box input::placeholder {
-  color: #bbb;
+  color: #6aaa28; /* softer green placeholder */
 }
 
 .auth-box .btn {
   align-self: center;
-  padding: 0.6rem 2rem;
+  background: #86c232;
+  color: #000;
   border-radius: 6px;
+  padding: 0.6rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-box .btn:hover {
+  background: #6aaa28; /* darker hover green */
+  color: #fff;
+}
+
+/* Auth Section (Sign Up / Login) */
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+  padding: 2rem;
+}
+
+.auth-box {
+  background: #86c232;
+  border: 2px solid #86c232; /* thin green border */
+  border-radius: 12px;
+  max-width: 700px; /* wider horizontally */
+  width: 100%;
+  text-align: center;
+  overflow: hidden; /* keeps black header flush */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Black heading strip inside green box */
+.auth-box h2 {
+  background: #000;
+  color: #fff;
+  font-family: "Newsreader", serif;
+  font-size: 2.2rem;
+  padding: 1rem;
+  margin: 0; /* no gap so it sits flush */
+  border-bottom: 2px solid #86c232; /* green separator line */
+}
+
+/* Form inside the green area */
+.auth-box form {
+  padding: 2rem;
+}
+
+.auth-box input {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  border: none;
+  border-radius: 20px;
+  background: #2e4d1d; /* dark green */
+  color: #fff;
+  font-size: 1rem;
+}
+
+.auth-box input::placeholder {
+  color: #ccc;
+}
+
+.auth-box .btn {
+  margin-top: 1rem;
+  width: 100%;
+  background: #2e7d32; /* bright green */
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-box .btn:hover {
+  background: #256d27; /* darker hover green */
+}
+
+.auth-box p {
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.auth-box a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Auth Section (Sign Up / Login) */
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* move higher up */
+  min-height: 100vh;
+  background: #000;
+  padding-top: 4rem;
+  box-sizing: border-box;
+}
+
+/* Outer green outline with glow */
+.auth-wrapper {
+  border: 2px solid #86c232; /* thin bright green outline */
+  border-radius: 8px;
+  padding: 2rem;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  box-sizing: border-box;
+
+  /* subtle glow effect */
+  box-shadow: 0 0 15px rgba(134, 194, 50, 0.6),
+              0 0 30px rgba(134, 194, 50, 0.3);
+}
+
+
+/* Heading outside green box */
+.auth-wrapper h2 {
+  font-family: "Newsreader", serif;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+/* Inner light green box */
+.auth-box {
+  background: #86c232;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Inputs inside light green box */
+.auth-box input {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  border: none;
+  border-radius: 20px;
+  background: #2e4d1d;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.auth-box input::placeholder {
+  color: #ccc;
+}
+
+/* Button */
+.auth-box .btn {
+  margin-top: 1rem;
+  width: 100%;
+  background: #2e7d32;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease
+}
+
+/* Dashboard */
+.dashboard {
+  background: #000;
+  color: #fff;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.welcome-box {
+  background: #666;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #86c232;
+  margin-bottom: 2rem;
+}
+
+.welcome-box h2 {
+  font-family: "Newsreader", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.upload-btn {
+  background: #86c232;
+  color: #000;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+/* Profile Summary */
+.profile-summary {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #222;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.profile-plant {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.profile-info p {
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* Plant Section */
+.plants-section {
+  margin-bottom: 2rem;
+}
+
+.plant-gallery {
+  display: flex;
+  gap: 1rem;
+}
+
+.add-plant-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #86c232;
+  color: #000;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Follow Section */
+.follow-section {
+  background: #1b3610;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.follow-profiles {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+}
+
+.profile-card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+  min-width: 150px;
+}
+
+.profile-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+/* Posts Section */
+.posts-section {
+  margin-top: 2rem;
+}
+
+.empty-posts {
+  border: 2px dashed #86c232;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  color: #aaa;
+}
+
+.empty-posts button {
+  background: #86c232;
+  color: #000;
+  border-radius: 50%;
+  padding: 0.5rem 0.9rem;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  border: 2px solid #86c232;
+  box-shadow: 0 0 15px #86c232;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #000;
+}
+
+/* Profile Photo + Edit Button */
+.photo-area {
+  position: relative;
+}
+
+.edit-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #86c232;
+  color: #000;
+  border-radius: 20px;
+  padding: 0.3rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Popup Setup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #86c232;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 400px;
+  color: #fff;
+}
+
+.popup-content input {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.8rem 0;
+  border-radius: 8px;
+  border: none;
+  background: #2e4d1d;
+  color: #fff;
 }
