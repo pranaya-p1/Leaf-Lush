@@ -1,5 +1,80 @@
 {% extends 'layout.html' %}
 {% block content %}
-<h1>Events Page</h1>
-<p>This is a placeholder for your events content.</p>
+
+<section class="events-page">
+  <div class="events-header">
+    <h2>Events</h2>
+    <p>All of the latest events, in one place..</p>
+  </div>
+
+  <!-- Featured Event -->
+  <div class="featured-event">
+    <img src="{{ url_for('static', filename='images/event-food1.jpg') }}" alt="Mediterranean Cooking Class" class="featured-img">
+
+    <div class="featured-info">
+      <h3>Taste of Mediterranean Cooking Class</h3>
+      <div class="qr-section">
+        <img src="{{ url_for('static', filename='images/qr-code.png') }}" alt="QR Code">
+      </div>
+      <div class="event-meta">
+        <p><strong>Date & Time 🕒</strong><br>3 Hours<br>10/12/2024 (<a href="#">Zoom Link</a>)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event Details Section -->
+  <section class="event-details">
+    <div class="details-text">
+      <h4>Event Details</h4>
+      <p>
+        Indulge in the vibrant flavours of the Mediterranean as you learn to craft dishes 
+        like zesty tabbouleh and lemon-infused grilled halloumi. This hands-on class includes 
+        fresh herbs, warm spices, and a splash of olive oil magic.
+      </p>
+    </div>
+
+    <div class="organiser-info">
+      <h4 class="green-text">Event Organiser</h4>
+      <div class="organiser-card">
+        <img src="{{ url_for('static', filename='images/organiser.jpg') }}" alt="John Dillon" class="organiser-img">
+        <div class="organiser-details">
+          <p><strong>John Dillon</strong></p>
+          <p>Phone Number: +61 3456789</p>
+          <p>Email: john.dillon2468@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gardening Events -->
+  <section class="gardening-section">
+    <h3>Gardening</h3>
+    <div class="event-grid">
+      <div class="event-card">
+        <img src="{{ url_for('static', filename='images/garden1.jpg') }}" alt="Urban Food Gardening">
+        <div class="event-info">
+          <h4>Urban Food Gardening Workshop (Pyrmont)</h4>
+          <p class="highlight">7th December • 3:30pm</p>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="{{ url_for('static', filename='images/garden2.jpg') }}" alt="Santa in the Garden">
+        <div class="event-info">
+          <h4>Santa in the Garden - Ashfield</h4>
+          <p class="highlight">Tomorrow • 12pm</p>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="{{ url_for('static', filename='images/garden3.jpg') }}" alt="Garbage to Garden Workshop">
+        <div class="event-info">
+          <h4>Garbage to Garden Workshop (8+ years)</h4>
+          <p class="highlight">Ryde Library • Saturday 1:45pm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
 {% endblock %}

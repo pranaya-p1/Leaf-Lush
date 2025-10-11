@@ -7,7 +7,7 @@ app.secret_key = "secret_key_here"
 
 # Folder for profile uploads
 app.config['UPLOAD_FOLDER'] = "static/uploads"
-
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # --- MAIN PAGES ---
 @app.route("/", methods=["GET", "POST"])
@@ -15,11 +15,9 @@ def index():
     data = dbHandler.listPlants()  # fetch plants from DB
     return render_template("index.html", content=data)
 
-
 @app.route("/events")
 def events():
     return render_template("events.html")
-
 
 @app.route("/posts")
 def posts():
@@ -35,15 +33,12 @@ def signup():
         password = request.form.get("password")
         confirm_password = request.form.get("confirm_password")
 
-        # Basic validation
         if password != confirm_password:
             return "Passwords do not match!"
 
         # Store in session temporarily
         session["username"] = username
-
-        # After signup, redirect to dashboard and show popup
-        return redirect(url_for("dashboard", username=username, show_popup=True))
+        return redirect(url_for("dashboard", username=username))
 
     return render_template("signup.html")
 
@@ -54,7 +49,7 @@ def login():
         email = request.form.get("email")
         password = request.form.get("password")
 
-        # For now, just redirect to dashboard (replace with DB auth later)
+        # Just redirect to dashboard for now
         username = session.get("username", "User")
         return redirect(url_for("dashboard", username=username))
 
@@ -64,22 +59,13 @@ def login():
 # --- DASHBOARD PAGE ---
 @app.route("/dashboard/<username>")
 def dashboard(username):
-    # Default profile picture
     profile_pic = session.get("profile_pic", url_for('static', filename='images/default-plant.jpg'))
-
-    # Random recommended users (AI generated placeholders)
     recommended_users = [
         {"name": "PetalPirate 🌸", "username": "@petalpirate", "image": url_for('static', filename='images/user1.jpg')},
         {"name": "SoilSurfer 🪴", "username": "@soilsurfer", "image": url_for('static', filename='images/user2.jpg')},
         {"name": "LeafItToMe 😎", "username": "@leafit", "image": url_for('static', filename='images/user3.jpg')}
     ]
-
-    return render_template(
-        "dashboard.html",
-        username=username,
-        profile_pic=profile_pic,
-        recommended_users=recommended_users
-    )
+    return render_template("dashboard.html", username=username, profile_pic=profile_pic, recommended_users=recommended_users)
 
 
 # --- UPDATE PROFILE PAGE ---
@@ -89,35 +75,9 @@ def update_profile(username):
         new_username = request.form["username"]
         file = request.files.get("profile_pic")
 
-        # Save new profile picture if uploaded
         if file and file.filename != "":
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
-            file.save(filepath)
-            session["profile_pic"] = url_for('static', filename=f'uploads/{file.filename}')
-
-        # Update username in session
-        session["username"] = new_username
-        return redirect(url_for('dashboard', username=new_username))
-    import os
-from flask import Flask, render_template, request, redirect, url_for, session
-
-app = Flask(__name__)
-app.secret_key = "secret_key_here"
-app.config['UPLOAD_FOLDER'] = "static/uploads"
-
-# Make sure the uploads folder exists
-if not os.path.exists(app.config['UPLOAD_FOLDER']):
-    os.makedirs(app.config['UPLOAD_FOLDER'])
-
-@app.route("/update_profile/<username>", methods=["GET", "POST"])
-def update_profile(username):
-    if request.method == "POST":
-        new_username = request.form["username"]
-        file = request.files["profile_pic"]
-
-        if file and file.filename != "":
-            filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
-            os.makedirs(os.path.dirname(filepath), exist_ok=True)  # ensures folder exists
+            os.makedirs(os.path.dirname(filepath), exist_ok=True)
             file.save(filepath)
             session["profile_pic"] = url_for('static', filename=f'uploads/{file.filename}')
 
@@ -127,8 +87,7 @@ def update_profile(username):
     return render_template("update_profile.html", username=username)
 
 
-
-# --- SAVE PROFILE API (used for popup submission) ---
+# --- SAVE PROFILE (POPUP) ---
 @app.route("/save_profile", methods=["POST"])
 def save_profile():
     username = request.form["username"]

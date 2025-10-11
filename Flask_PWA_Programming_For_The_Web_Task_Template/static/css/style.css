@@ -675,3 +675,229 @@ nav {
   background: #2e4d1d;
   color: #fff;
 }
+
+/* EVENTS PAGE */
+.events-page {
+  background-color: #000;
+  color: white;
+  padding: 50px 60px;
+  min-height: 100vh;
+}
+
+.events-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.events-header h1 {
+  font-size: 3em;
+  background: #111;
+  border: 2px solid #6bbf59;
+  border-radius: 15px;
+  display: inline-block;
+  padding: 10px 40px;
+  color: white;
+  box-shadow: 0 0 15px rgba(107, 191, 89, 0.5);
+}
+
+.events-header p {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.events-section {
+  margin-bottom: 60px;
+}
+
+.events-section h2 {
+  font-size: 1.8em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.event-card {
+  background: #222;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(107, 191, 89, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(107, 191, 89, 0.6);
+}
+
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 15px;
+}
+
+.event-info h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.event-info p {
+  margin: 3px 0;
+  font-size: 0.95em;
+  color: #ddd;
+}
+
+.event-info a {
+  color: #6bbf59;
+  text-decoration: none;
+}
+
+.event-info a:hover {
+  text-decoration: underline;
+}
+
+/* --- Events Page --- */
+.events-page {
+  background: #000;
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.events-header {
+  border: 2px solid #86c232;
+  display: inline-block;
+  padding: 1rem 3rem;
+  margin-bottom: 3rem;
+}
+
+.events-header h2 {
+  font-family: "Newsreader", serif;
+  font-size: 2.5rem;
+}
+
+.events-header p {
+  color: #ccc;
+  font-style: italic;
+}
+
+/* Featured Event */
+.featured-event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  gap: 1.5rem;
+}
+
+.featured-event .featured-img {
+  width: 45%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.featured-info {
+  background: #7fbf3a;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: left;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.qr-section img {
+  width: 100px;
+  float: right;
+}
+
+.event-meta a {
+  color: #0044ff;
+}
+
+/* Details Section */
+.event-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.details-text, .organiser-info {
+  flex: 1;
+}
+
+.details-text p {
+  text-align: left;
+  line-height: 1.6;
+}
+
+.organiser-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.organiser-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.green-text {
+  color: #86c232;
+}
+
+/* Gardening Events */
+.gardening-section {
+  margin-top: 3rem;
+}
+
+.event-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.event-card {
+  background: #444;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 280px;
+  text-align: left;
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 1rem;
+}
+
+.highlight {
+  color: #86c232;
+  font-weight: bold;
+}
+
