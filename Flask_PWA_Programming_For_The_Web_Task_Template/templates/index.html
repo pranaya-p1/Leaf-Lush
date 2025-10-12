@@ -1,6 +1,12 @@
 {% extends 'layout.html' %}
 {% block content %}
 
+<!-- PWA Manifest + Theme -->
+<head>
+  <link rel="manifest" href="{{ url_for('static', filename='../manifest.json') }}">
+  <meta name="theme-color" content="#14E6DD">
+</head>
+
 <!-- Hero Section -->
 <section class="hero">
   <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Garden hero image" class="hero-img">
@@ -55,5 +61,17 @@
     <img src="{{ url_for('static', filename='images/sponsor2.png') }}" alt="Final Touch Sponsor">
   </div>
 </footer>
+
+<!-- Register Service Worker -->
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker
+        .register("/static/js/serviceworker.js")
+        .then((res) => console.log("✅ Service Worker registered"))
+        .catch((err) => console.log("❌ Service Worker not registered", err));
+    });
+  }
+</script>
 
 {% endblock %}
