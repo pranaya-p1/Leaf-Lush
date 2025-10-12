@@ -2,6 +2,7 @@
 {% block content %}
 
 <section class="events-page">
+  <!-- Header -->
   <div class="events-header">
     <h2>Events</h2>
     <p>All of the latest events, in one place..</p>
@@ -9,42 +10,24 @@
 
   <!-- Featured Event -->
   <div class="featured-event">
-    <img src="{{ url_for('static', filename='images/event-food1.jpg') }}" alt="Mediterranean Cooking Class" class="featured-img">
+    <img src="{{ url_for('static', filename='images/event-food1.jpg') }}" 
+         alt="Mediterranean Cooking Class" 
+         class="featured-img">
 
     <div class="featured-info">
-      <h3>Taste of Mediterranean Cooking Class</h3>
+      <a href="{{ url_for('event_detail', event_id='mediterranean-cooking-class') }}" class="event-link">
+        <h3>Taste of Mediterranean Cooking Class</h3>
+      </a>
+
       <div class="qr-section">
         <img src="{{ url_for('static', filename='images/qr-code.png') }}" alt="QR Code">
       </div>
+
       <div class="event-meta">
         <p><strong>Date & Time 🕒</strong><br>3 Hours<br>10/12/2024 (<a href="#">Zoom Link</a>)</p>
       </div>
     </div>
   </div>
-
-  <!-- Event Details Section -->
-  <section class="event-details">
-    <div class="details-text">
-      <h4>Event Details</h4>
-      <p>
-        Indulge in the vibrant flavours of the Mediterranean as you learn to craft dishes 
-        like zesty tabbouleh and lemon-infused grilled halloumi. This hands-on class includes 
-        fresh herbs, warm spices, and a splash of olive oil magic.
-      </p>
-    </div>
-
-    <div class="organiser-info">
-      <h4 class="green-text">Event Organiser</h4>
-      <div class="organiser-card">
-        <img src="{{ url_for('static', filename='images/organiser.jpg') }}" alt="John Dillon" class="organiser-img">
-        <div class="organiser-details">
-          <p><strong>John Dillon</strong></p>
-          <p>Phone Number: +61 3456789</p>
-          <p>Email: john.dillon2468@gmail.com</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Gardening Events -->
   <section class="gardening-section">

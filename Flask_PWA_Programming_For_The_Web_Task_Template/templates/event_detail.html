@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+<section class="event-detail-page">
+  <div class="event-banner">
+    <img src="{{ url_for('static', filename='images/event-food1.jpg') }}" alt="Mediterranean Cooking Class">
+  </div>
+
+  <div class="event-detail-content">
+    <h2>Taste of Mediterranean Cooking Class</h2>
+    <p><strong>Date:</strong> 10/12/2024 (Zoom)</p>
+    <p><strong>Duration:</strong> 3 Hours</p>
+    <p>
+      Indulge in the vibrant flavours of the Mediterranean as you learn to craft dishes 
+      like zesty tabbouleh and lemon-infused grilled halloumi. This hands-on class includes 
+      fresh herbs, warm spices, and a splash of olive oil magic.
+    </p>
+
+    <a href="{{ url_for('events') }}" class="back-link">← Back to Events</a>
+  </div>
+</section>
+{% endblock %}

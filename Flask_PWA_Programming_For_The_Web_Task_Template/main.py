@@ -105,3 +105,11 @@ def save_profile():
 # --- RUN SERVER ---
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5001)
+
+@app.route("/event/<event_id>")
+def event_detail(event_id):
+    if event_id == "mediterranean-cooking-class":
+        return render_template("event_detail.html")
+    else:
+        return "Event not found", 404
+
