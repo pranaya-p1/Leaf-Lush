@@ -9,15 +9,18 @@ app.secret_key = "secret_key_here"
 app.config['UPLOAD_FOLDER'] = "static/uploads"
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
+
 # --- MAIN PAGES ---
 @app.route("/", methods=["GET", "POST"])
 def index():
     data = dbHandler.listPlants()  # fetch plants from DB
     return render_template("index.html", content=data)
 
+
 @app.route("/events")
 def events():
     return render_template("events.html")
+
 
 @app.route("/posts")
 def posts():
@@ -102,10 +105,7 @@ def save_profile():
     return redirect(url_for("dashboard", username=username))
 
 
-# --- RUN SERVER ---
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5001)
-
+# --- EVENT DETAIL PAGE ---
 @app.route("/event/<event_id>")
 def event_detail(event_id):
     if event_id == "mediterranean-cooking-class":
@@ -113,3 +113,7 @@ def event_detail(event_id):
     else:
         return "Event not found", 404
 
+
+# --- RUN SERVER ---
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=5001)
