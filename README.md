@@ -167,3 +167,6 @@ My favourite part was probably getting the right font for the text. It matched t
 The page is not completely refined right now as the typing boxes are sitting quite low on the page, with a lot of blank space at the top. But I will be fixing that soon. 
 
 I also worked a bit on refining my homepage, such as the size and style of the buttons to ensure they look consistent among the webpage. I also edited the Heading font to Newsreader. It looked very boring before and I was struggling to find a font that looked similar to the one on Figma. However, now that I have changed it, the whole webpage looks much more visually appealing. 
+
+## Holidays Week 2 Entry
+This week I aimed to complete my webpage.

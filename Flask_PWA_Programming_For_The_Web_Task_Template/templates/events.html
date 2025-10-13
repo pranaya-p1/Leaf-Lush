@@ -9,54 +9,87 @@
   </div>
 
   <!-- Featured Event -->
-  {% set featured_event = {
-      "id": "mediterranean-cooking-class",
-      "title": "Taste of Mediterranean Cooking Class",
-      "image": "images/event-food1.jpg",
-      "date": "10/12/2024",
-      "duration": "3 Hours",
-      "link": "#"
-  } %}
   <div class="featured-event">
-    <img src="{{ url_for('static', filename=featured_event.image) }}" 
-         alt="{{ featured_event.title }}" 
-         class="featured-img">
+    <div class="featured-image-container">
+      <!-- Slightly wider image -->
+      <img src="{{ url_for('static', filename='images/event-food1.jpg') }}"
+           alt="Mediterranean Cooking Class"
+           class="featured-img">
+    </div>
 
     <div class="featured-info">
-      <a href="{{ url_for('event_detail', event_id=featured_event.id) }}" class="event-link">
-        <h3>{{ featured_event.title }}</h3>
-      </a>
+      <!-- LEFT: title / date / description / organiser -->
+      <div class="featured-left">
+        <a href="{{ url_for('event_detail', event_id='mediterranean-cooking-class') }}" class="event-link">
+          <h3 class="featured-title">Taste of Mediterranean Cooking Class</h3>
+        </a>
 
-      <div class="qr-section">
-        <img src="{{ url_for('static', filename='images/qr-code.png') }}" alt="QR Code">
+        <div class="event-date-time">
+          <p><strong>Date & Time 🕒</strong></p>
+          <p>3 Hours</p>
+          <p>10/12/2024 (<a href="#" class="muted-link">Zoom Link</a>)</p>
+        </div>
+
+        <p class="event-description">
+          Indulge in the vibrant flavours of the Mediterranean as you learn to craft dishes
+          like zesty tabbouleh and lemon-infused grilled halloumi.
+        </p>
+
+        <div class="event-organizer">
+          <div class="organizer-photo">
+            <img src="{{ url_for('static', filename='images/john_dillon.jpg') }}" alt="John Dillon">
+          </div>
+          <div class="organizer-info">
+            <p class="green-text">Event Organiser</p>
+            <h4>John Dillon</h4>
+            <p><strong>Phone:</strong> +61 3456789</p>
+            <p><strong>Email:</strong> john.dillon2468@gmail.com</p>
+          </div>
+        </div>
       </div>
 
-      <div class="event-meta">
-        <p><strong>Date & Time 🕒</strong><br>{{ featured_event.duration }}<br>{{ featured_event.date }} (<a href="{{ featured_event.link }}">Zoom Link</a>)</p>
+      <!-- RIGHT: QR code (smaller + no white background) -->
+      <div class="featured-right">
+        <img src="{{ url_for('static', filename='images/qr-code.png') }}" alt="QR Code" class="qr-large">
       </div>
     </div>
   </div>
 
-  <!-- Gardening Events -->
-  {% set gardening_events = [
-      {"title": "Urban Food Gardening Workshop (Pyrmont)", "image": "images/garden1.jpg", "highlight": "7th December • 3:30pm"},
-      {"title": "Santa in the Garden - Ashfield", "image": "images/garden2.jpg", "highlight": "Tomorrow • 12pm"},
-      {"title": "Garbage to Garden Workshop (8+ years)", "image": "images/garden3.jpg", "highlight": "Ryde Library • Saturday 1:45pm"}
-  ] %}
+  <!-- Divider -->
+  <hr class="section-divider">
+
+  <!-- Gardening Section -->
   <section class="gardening-section">
     <h3>Gardening</h3>
     <div class="event-grid">
-      {% for event in gardening_events %}
-      <div class="event-card">
-        <img src="{{ url_for('static', filename=event.image) }}" alt="{{ event.title }}">
+      <a href="{{ url_for('gardening_event1') }}" class="event-card">
+        <img src="{{ url_for('static', filename='images/garden1.jpg') }}" alt="Urban Food Gardening Workshop">
         <div class="event-info">
-          <h4>{{ event.title }}</h4>
-          <p class="highlight">{{ event.highlight }}</p>
+          <h4>Urban Food Gardening Workshop (Pyrmont)</h4>
+          <p class="highlight">7th December • 3:30pm</p>
         </div>
-      </div>
-      {% endfor %}
+      </a>
+
+      <a href="{{ url_for('gardening_event2') }}" class="event-card">
+        <img src="{{ url_for('static', filename='images/garden2.jpg') }}" alt="Santa in the Garden Ashfield">
+        <div class="event-info">
+          <h4>Santa in the Garden - Ashfield</h4>
+          <p class="highlight">Tomorrow • 12pm</p>
+        </div>
+      </a>
+
+      <a href="{{ url_for('gardening_event3') }}" class="event-card">
+        <img src="{{ url_for('static', filename='images/garden3.jpg') }}" alt="Garbage to Garden Workshop">
+        <div class="event-info">
+          <h4>Garbage to Garden Workshop (8+ years)</h4>
+          <p class="highlight">Ryde Library • Saturday 1:45pm</p>
+        </div>
+      </a>
     </div>
+
+    <div class="bottom-space"></div>
   </section>
 </section>
 
 {% endblock %}
+ 

@@ -12,7 +12,7 @@
   <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Garden hero image" class="hero-img">
   <div class="hero-text">
     <h2>Where <em>every leaf</em> 🍃 <br>🌿 tells a story...</h2>
-    <a href="{{ url_for('posts') }}" class="btn">View Posts</a>
+    <a href="{{ url_for('events') }}" class="btn">View Events</a>
   </div>
 </section>
 
@@ -35,23 +35,10 @@
     <h3>Healthy Garden Salad Recipe</h3>
     <p><em>from a source you can trust!</em></p>
     <span>- Sarah Gilbert</span><br>
-    <a href="#" class="btn">View Recipes</a>
+    <a href="{{ url_for('events') }}" class="btn">View Events</a>
   </div>
 </section>
 
-<!-- Posts Section -->
-<section class="posts">
-  <h2>Posts</h2>
-  <div class="post-card">
-    <img src="{{ url_for('static', filename='images/bean.jpg') }}" alt="Bean Plant">
-    <div class="post-info">
-      <h3>First Results Of My Bean Plant!</h3>
-      <p><strong>Day 13</strong></p>
-      <p>by Emma Blankship</p>
-      <a href="{{ url_for('posts') }}" class="btn">View Posts</a>
-    </div>
-  </div>
-</section>
 
 <!-- Sponsors -->
 <footer class="sponsors">

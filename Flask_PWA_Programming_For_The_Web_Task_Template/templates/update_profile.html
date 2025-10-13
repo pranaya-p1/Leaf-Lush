@@ -5,6 +5,12 @@
     <h2>Update Profile</h2>
     <form method="POST" enctype="multipart/form-data">
       <input type="text" name="username" placeholder="New username" value="{{ username }}" required>
+      <label for="bio">Bio</label>
+      <textarea id="bio" name="bio" rows="3" placeholder="Write a short bio...">{{ session.get('bio', '') }}</textarea>
+
+     <label for="fun_fact">Fun Fact</label>
+     <input type="text" id="fun_fact" name="fun_fact" placeholder="Enter a fun fact..." value="{{ session.get('fun_fact', '') }}">
+
       <input type="file" name="profile_pic" accept="image/*">
       <button type="submit" class="btn">Save Changes</button>
     </form>
