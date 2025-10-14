@@ -132,17 +132,31 @@ def login():
     return render_template("login.html")
 
 
-# --- DASHBOARD PAGE --- 
-@app.route("/dashboard/<username>") 
-def dashboard(username): 
-    profile_pic = session.get("profile_pic", url_for('static', filename='images/default-plant.jpg')) 
-    recommended_users = [ 
-        {"name": "PetalPirate 🌸", "username": "@petalpirate", "image": url_for('static', filename='images/user1.jpg')}, 
-        {"name": "SoilSurfer 🪴", "username": "@soilsurfer", "image": url_for('static', filename='images/user2.jpg')}, 
-        {"name": "LeafItToMe 😎", "username": "@leafit", "image": url_for('static', filename='images/user3.jpg')} 
-    ] 
-    return render_template("dashboard.html", username=username, profile_pic=profile_pic, recommended_users=recommended_users)
+@app.route("/dashboard/<username>")
+def dashboard(username):
+    profile_pic = session.get("profile_pic", url_for('static', filename='images/default-plant.jpg'))
+    recommended_users = [
+        {"name": "PetalPirate 🌸", "username": "@petalpirate", "image": url_for('static', filename='images/user1.jpg')},
+        {"name": "SoilSurfer 🪴", "username": "@soilsurfer", "image": url_for('static', filename='images/user2.jpg')},
+        {"name": "LeafItToMe 😎", "username": "@leafit", "image": url_for('static', filename='images/user3.jpg')}
+    ]
 
+    # Fetch posts from session (temporary storage)
+    user_posts = session.get("posts", [])
+
+    return render_template(
+        "dashboard.html",
+        username=username,
+        profile_pic=profile_pic,
+        recommended_users=recommended_users,
+        user_posts=user_posts
+    )
+
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(url_for("index"))
 
 
 @app.route("/update_profile/<username>", methods=["GET", "POST"])

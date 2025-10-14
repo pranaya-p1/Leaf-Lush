@@ -13,7 +13,7 @@
         <div class="user-info">
             <p><strong>Bio:</strong> {{ session.get('bio', 'Loves all things green and growing 🌿') }}</p>
             <p><strong>Fun Fact:</strong> {{ session.get('fun_fact', 'Once grew a plant from a coffee bean ☕') }}</p>
-            <a href="{{ url_for('update_profile', username=username) }}" class="btn">Update Profile</a>
+            <a href="{{ url_for('update_profile', username=username) }}" class="btn green-btn">Update Profile</a>
         </div>
     </div>
 
@@ -34,19 +34,30 @@
                 <img src="{{ user.image }}" alt="{{ user.name }}">
                 <h4>{{ user.name }}</h4>
                 <p>{{ user.username }}</p>
-                <button class="btn">Follow</button>
+                <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
             </div>
             {% endfor %}
         </div>
     </div>
 
     <!-- Posts -->
-    <div class="posts-section outlined-box">
+    <div class="posts-section">
         <h3>Your Posts:</h3>
-        <div class="empty-posts extended-row">
-            <p>No posts yet — start sharing your garden!</p>
-            <a href="{{ url_for('add_post') }}" class="btn add-post-btn">+</a>
-        </div>
+        {% if posts %}
+            <div class="posts-grid">
+                {% for post in posts %}
+                    <div class="post-card">
+                        <h4 class="post-title">{{ post.title }}</h4>
+                        <p class="post-description">{{ post.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-posts extended-row">
+                <p>No posts yet — start sharing your garden!</p>
+                <a href="{{ url_for('add_post') }}" class="btn add-post-btn">+</a>
+            </div>
+        {% endif %}
     </div>
 
 </section>
@@ -59,7 +70,7 @@
         <form action="{{ url_for('save_profile') }}" method="POST" enctype="multipart/form-data">
             <input type="text" name="username" placeholder="Enter a username" required>
             <input type="file" name="profile_pic" accept="image/*" required>
-            <button type="submit" class="btn">Save</button>
+            <button type="submit" class="btn green-btn">Save</button>
         </form>
     </div>
 </div>
@@ -69,5 +80,109 @@
     document.getElementById("setup-popup").style.display = "flex";
 </script>
 {% endif %}
+
+<!-- Custom Styling and JS -->
+<style>
+/* General site green */
+:root {
+  --leaf-green: #3fbf3f;
+}
+
+/* Remove outline box dotted border for posts */
+.posts-section {
+  background-color: #1b1b1b;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* Post card styling */
+.post-card {
+  background-color: #222;
+  color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease;
+}
+.post-card:hover {
+  transform: scale(1.02);
+}
+.post-title {
+  color: var(--leaf-green);
+  margin-bottom: 8px;
+}
+.post-description {
+  color: #f2f2f2;
+  font-size: 0.95rem;
+}
+
+/* Follow button (green, turns blue when active) */
+.follow-btn {
+  background-color: var(--leaf-green);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.follow-btn:hover {
+  background-color: #37a737;
+}
+.follow-btn.following {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Fix + button alignment */
+.add-post-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: var(--leaf-green);
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.add-post-btn:hover {
+  background-color: #37a737;
+  transform: scale(1.05);
+}
+
+/* Green buttons (used for login/logout too) */
+.green-btn, .btn-login, .btn-logout {
+  background-color: var(--leaf-green);
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.green-btn:hover, .btn-login:hover, .btn-logout:hover {
+  background-color: #37a737;
+}
+</style>
+
+<script>
+function toggleFollow(button) {
+  if (button.classList.contains('following')) {
+    button.classList.remove('following');
+    button.textContent = 'Follow';
+  } else {
+    button.classList.add('following');
+    button.textContent = 'Following';
+  }
+}
+</script>
 
 {% endblock %}

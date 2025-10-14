@@ -3,12 +3,13 @@
     <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Leaf & Lush logo" class="logo">
     <h1>Leaf & Lush</h1>
   </div>
+
   <div class="nav-bottom">
     <ul>
       <li><a href="{{ url_for('index') }}">Home</a></li>
       <li><a href="{{ url_for('events') }}">Events</a></li>
 
-      <!-- Dashboard link with session check -->
+      <!-- Dashboard link -->
       <li>
         {% if session.get('username') %}
           <a href="{{ url_for('dashboard', username=session['username']) }}">My Dashboard</a>
@@ -17,7 +18,75 @@
         {% endif %}
       </li>
 
-      <li><a href="{{ url_for('login') }}" class="btn login-btn">Login</a></li>
+      <!-- Login/Logout button -->
+      <li>
+        {% if session.get('username') %}
+          <a href="{{ url_for('logout') }}" class="btn-nav green-btn">Logout</a>
+        {% else %}
+          <a href="{{ url_for('login') }}" class="btn-nav green-btn">Login</a>
+        {% endif %}
+      </li>
     </ul>
   </div>
 </nav>
+
+<style>
+/* --- Navigation Styling --- */
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #111;
+  padding: 1rem;
+  height: 100%;
+}
+
+.nav-top {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.nav-bottom ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-bottom li {
+  margin: 10px 0;
+}
+
+.nav-bottom a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-bottom a:hover {
+  color: #3fbf3f;
+}
+
+/* --- Green Button Styling --- */
+.green-btn, .btn-nav {
+  display: inline-block;
+  background-color: #3fbf3f;
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.green-btn:hover, .btn-nav:hover {
+  background-color: #37a737;
+}
+</style>
