@@ -27,3 +27,9 @@ def listPlants():
 def listExtension():
     return listPlants()   # or listTables(), depending on what you want
 
+def delete_post(post_id):
+    conn = sqlite3.connect('database.db')
+    c = conn.cursor()
+    c.execute("DELETE FROM posts WHERE id=?", (post_id,))
+    conn.commit()
+    conn.close()

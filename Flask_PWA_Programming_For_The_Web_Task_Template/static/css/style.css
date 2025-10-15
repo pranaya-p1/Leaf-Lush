@@ -48,7 +48,7 @@ nav {
 }
 .nav-bottom li a:hover { color: #86c232; }
 .login-btn {
-  background: #86c232;
+  background: #77a734;
   border-radius: 20px;
   color: #000 !important;
   font-weight: bold;
@@ -142,7 +142,7 @@ nav {
   text-align: center;
   transition: background 0.3s ease;
 }
-.btn:hover { background: #6aaa28; color: #fff; }
+.btn:hover { background: #86C232; color: #fff; }
 .post-info .btn { padding: 0.5rem 1.3rem; border-radius: 22px; }
 
 /* Sponsors Section */
@@ -185,7 +185,7 @@ nav {
 .auth-box .btn {
   margin-top: 1rem;
   width: 100%;
-  background: #2e7d32;
+  background: #86C232;
   border: none;
   border-radius: 8px;
   padding: 0.8rem;
@@ -343,6 +343,29 @@ nav {
 }
 
 
+.menu-button[href*="login"],
+.menu-button[href*="logout"] {
+  background-color: #28a745; /* green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.menu-button[href*="login"]:hover,
+.menu-button[href*="logout"]:hover {
+  background-color: #218838; /* darker green on hover */
+}
+.menu {
+  background-color: #fff; /* white background */
+  color: #000; /* make text dark for contrast */
+  border-bottom: 1px solid #ddd; /* subtle divider line, optional */
+}
+
+
 /* Popup */
 .popup-overlay {
   position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -365,7 +388,7 @@ nav {
 
 /* Header */
 .events-header {
-  border: 2px solid #86c232;
+  border: 2px solid #86C232;
   display: inline-block;
   padding: 1rem 2.2rem;
   margin-bottom: 2.5rem;
@@ -867,7 +890,7 @@ nav {
   font-size: 2.8rem;
   font-weight: 700;
   color: white;
-  border: 3px solid #2ECC71; /* green outline */
+  border: 3px solid #86C232; /* green outline */
   display: inline-block;
   padding: 10px 25px;
   border-radius: 12px;
@@ -880,7 +903,7 @@ nav {
 }
 
 .green-link {
-  color: #2ECC71;
+  color: #86C232;
   text-decoration: underline;
 }
 
@@ -921,7 +944,7 @@ nav {
 }
 
 .green-text {
-  color: #2ECC71;
+  color: #86C232;
 }
 
 hr.divider {
@@ -957,7 +980,7 @@ hr.divider {
 
 .add-post-container {
   background: #111;
-  border: 2px solid #86c232;
+  border: 2px solid #86C232;
   border-radius: 12px;
   padding: 2rem 2.5rem;
   width: 90%;
@@ -1018,7 +1041,7 @@ hr.divider {
 }
 
 .welcome-banner {
-  background-color: #4CAF50; /* green */
+  background-color: #86C232; /* green */
   color: white;
   padding: 40px 20px;
   border-radius: 10px;
@@ -1131,7 +1154,7 @@ hr.divider {
 }
 
 .post-title {
-  color: #6bcf63; /* classic green */
+  color: #86C232; /* classic green */
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
@@ -1142,7 +1165,7 @@ hr.divider {
 }
 
 .follow-btn {
-  background-color: #6bcf63; /* green */
+  background-color: #86C232; /* green */
   color: white;
   border: none;
   border-radius: 8px;
@@ -1155,5 +1178,408 @@ hr.divider {
   background-color: #007bff; /* blue */
 }
 
+.green-btn, .btn {
+  background-color: #3fbf3f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.green-btn:hover, .btn:hover {
+  background-color: #37a737;
+}
+
+/* --- Green Back Link --- */
+a.dashboard-link {
+  color: #3fbf3f !important;  /* always visible green */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a.dashboard-link:hover {
+  color: #45d145 !important;  /* slightly brighter green on hover */
+  text-decoration: underline;
+}
+
+/* Keep 'My Dashboard' black even when active */
+.nav-bottom a[href*="dashboard"] {
+  color: #000 !important; /* stay black */
+}
+
+.nav-bottom a[href*="dashboard"]:hover {
+  color: #86c232 !important; /* green on hover only */
+}
 
 
+/* --- Post Styling --- */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  background-color: #222; /* dark grey background */
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.post-card .post-title {
+  color: #86C232; /* green titles */
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.post-card .post-description {
+  color: #eee;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.post-card img.post-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Posts section layout */
+.posts-section {
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Display posts clearly with spacing */
+.posts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Post card styling */
+.post-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.post-info {
+  flex: 1;
+}
+
+.post-info h3 {
+  margin: 0 0 8px;
+  color: #222;
+  font-size: 1.2rem;
+}
+
+.post-info p {
+  margin: 0;
+  color: #555;
+}
+
+/* Delete button */
+.delete-form {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.delete-btn:hover {
+  color: #c00;
+}
+
+/* Plus button styling */
+.add-post-btn {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 2rem;
+  color: white;
+  background-color: #86C232;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.add-post-btn:hover {
+  background-color: #1f6a30;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ff4c4c;
+  font-size: 1.2rem;
+  cursor: pointer;
+  float: right;
+  transition: color 0.3s ease;
+}
+.delete-btn:hover {
+  color: #ff0000;
+}
+
+
+:root {
+  --leaf-green: #86C232;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* --- Plant Section --- */
+.plants-section {
+  background: #1b1b1b;
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.plant-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.plant-card {
+  background: #222;
+  border-radius: 10px;
+  padding: 10px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.plant-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.add-plant-btn {
+  background-color: var(--leaf-green);
+  color: white;
+  font-size: 36px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.add-plant-btn:hover {
+  background-color: #86C232;
+}
+
+/* --- Posts Section --- */
+.posts-section {
+  background: #1b1b1b;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+}
+
+.posts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+}
+
+.post-card {
+  background-color: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 240px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+.post-card:hover { transform: scale(1.02); }
+
+.post-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.post-info {
+  padding: 10px;
+}
+
+.post-title {
+  color: var(--leaf-green);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.post-description {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+/* --- Add Post Buttons --- */
+.add-post-btn {
+  background-color: var(--leaf-green);
+  color: #fff;
+  font-size: 36px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+.add-post-btn:hover {
+  background-color: #86C232;
+}
+
+.center-btn {
+  margin: 20px auto;
+}
+
+.side-btn {
+  position: absolute;
+  right: -80px;
+  bottom: 0;
+}
+
+/* --- Delete Button --- */
+.delete-form {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.delete-btn:hover { color: #c00; }
+
+/* --- Form Styling (add_plant.html) --- */
+.form-box {
+  background-color: #1b1b1b;
+  padding: 25px;
+  border-radius: 12px;
+  color: #fff;
+  width: 500px;
+  margin: 40px auto;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-box input,
+.form-box textarea {
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 8px;
+  color: white;
+}
+
+.green-btn {
+  background-color: var(--leaf-green);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.green-btn:hover {
+  background-color: #37a737;
+}
+
+
+/* 🌿 Main Leaf-Lush Button Style */
+button,
+.btn,
+.button {
+  background-color: #86C232;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+.btn:hover,
+.button:hover {
+  background-color: #6fa428; /* slightly darker hover */
+  transform: scale(1.03);
+}
+
+a.button-link {
+  display: inline-block;
+  background-color: #86C232;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a.button-link:hover {
+  background-color: #6fa428;
+  transform: scale(1.03);
+}

@@ -1,17 +1,28 @@
 {% extends 'layout.html' %}
 {% block content %}
-<section class="add-plant">
-  <h2>Add a New Plant</h2>
-  <form method="POST" enctype="multipart/form-data">
-    <label>Plant Name</label>
-    <input type="text" name="name" required>
-    <label>Plant Age</label>
-    <input type="text" name="age" required>
-    <label>Plant Image</label>
-    <input type="file" name="image" accept="image/*" required>
-    <label>Bio</label>
-    <textarea name="bio" rows="3"></textarea>
-    <button type="submit" class="btn">Add Plant</button>
-  </form>
+
+<section class="add-plant-page">
+    <div class="outlined-box form-box">
+        <h2>Add a New Plant 🌿</h2>
+        <form action="{{ url_for('add_plant') }}" method="POST" enctype="multipart/form-data">
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Plant name" required>
+
+            <label>Latin Name (optional):</label>
+            <input type="text" name="latin_name" placeholder="e.g. Ficus lyrata">
+
+            <label>Age (in weeks):</label>
+            <input type="number" name="age" min="0" step="0.1" placeholder="1.5">
+
+            <label>Description:</label>
+            <textarea name="description" rows="3" placeholder="Describe your plant briefly..."></textarea>
+
+            <label>Upload Image:</label>
+            <input type="file" name="image" accept="image/*" required>
+
+            <button type="submit" class="btn green-btn">Add Plant</button>
+        </form>
+    </div>
 </section>
+
 {% endblock %}

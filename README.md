@@ -169,4 +169,6 @@ The page is not completely refined right now as the typing boxes are sitting qui
 I also worked a bit on refining my homepage, such as the size and style of the buttons to ensure they look consistent among the webpage. I also edited the Heading font to Newsreader. It looked very boring before and I was struggling to find a font that looked similar to the one on Figma. However, now that I have changed it, the whole webpage looks much more visually appealing. 
 
 ## Holidays Week 2 Entry
-This week I aimed to complete my webpage.
+This week I installed and registered the service worker in order to test my webpage. I then did a Google Lighthouse report.
+![alt text](image-12.png)
+I realised that that the performance of the webpage was lower than expected. The main feedback was to reduce the time it tkes for the largest image to lod. However, this was quite a minor issue and could be fixed by reducing the size of the image. Another insight was to reduce uneeded CSS and increase the contrast of the website. 

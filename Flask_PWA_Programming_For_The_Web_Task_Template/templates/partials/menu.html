@@ -4,17 +4,19 @@
     <h1>Leaf & Lush</h1>
   </div>
 
+
   <div class="nav-bottom">
     <ul>
       <li><a href="{{ url_for('index') }}">Home</a></li>
       <li><a href="{{ url_for('events') }}">Events</a></li>
+      <li><a href="{{ url_for('posts') }}">Posts</a></li>
 
       <!-- Dashboard link -->
       <li>
         {% if session.get('username') %}
-          <a href="{{ url_for('dashboard', username=session['username']) }}">My Dashboard</a>
+          <a href="{{ url_for('dashboard', username=session['username']) }}" class="dashboard-link">My Dashboard</a>
         {% else %}
-          <a href="{{ url_for('login') }}">My Dashboard</a>
+          <a href="{{ url_for('login') }}" class="dashboard-link">My Dashboard</a>
         {% endif %}
       </li>
 
@@ -36,9 +38,10 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #111;
+  background-color: white; /* White menu background */
   padding: 1rem;
   height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-top {
@@ -61,21 +64,24 @@ nav {
   margin: 10px 0;
 }
 
-.nav-bottom a {
-  text-decoration: none;
-  color: #ccc;
+/* --- All Links (no purple/blue underline) --- */
+.nav-bottom a,
+a {
+  text-decoration: none !important;
+  color: #111;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.nav-bottom a:hover {
-  color: #3fbf3f;
+.nav-bottom a:hover,
+a:hover {
+  color: #86C232;
 }
 
 /* --- Green Button Styling --- */
 .green-btn, .btn-nav {
   display: inline-block;
-  background-color: #3fbf3f;
+  background-color: #86C232;
   color: white !important;
   border: none;
   border-radius: 8px;
@@ -87,6 +93,19 @@ nav {
 }
 
 .green-btn:hover, .btn-nav:hover {
-  background-color: #37a737;
+  background-color: #86C232;
+}
+
+/* --- Dashboard link (normal link with green hover) --- */
+.dashboard-link {
+  background: none;
+  color: #111 !important;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.dashboard-link:hover {
+  color: #86C232 !important;
 }
 </style>

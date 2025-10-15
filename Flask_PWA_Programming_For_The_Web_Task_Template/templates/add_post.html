@@ -16,8 +16,14 @@
       <button type="submit" class="btn">Post</button>
     </form>
     <p style="text-align:center; margin-top: 1.5rem;">
-  <a href="{{ url_for('dashboard', username=session['username']) }}" style="color:#86c232; text-decoration:none;">
-    ← Back to Dashboard
+  {# add_post.html - Back link (plain link, green via .dashboard-link class) #}
+{% if session.get('username') %}
+  <a href="{{ url_for('dashboard', username=session['username']) }}" class="dashboard-link">← Back to Dashboard</a>
+{% else %}
+  <a href="{{ url_for('login') }}" class="dashboard-link">← Back to Dashboard</a>
+{% endif %}
+
+
   </a>
 </p>
 
