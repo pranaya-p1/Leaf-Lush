@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="posts-page">
+  <h1 class="posts-title">Community Gardening Posts</h1>
+
+  <div class="posts-grid">
+    {% for post in posts %}
+      <div class="post-card">
+        <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
+        <div class="post-content">
+          <h2 class="post-title">{{ post.title }}</h2>
+          <p class="post-description">{{ post.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+/* --- POSTS PAGE STYLING (Leaf & Lush theme) --- */
+:root {
+  --leaf-green: #86C232;
+}
+
+.posts-page {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 50px;
+  min-height: 100vh;
+}
+
+.posts-title {
+  text-align: center;
+  color: var(--leaf-green);
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.post-card {
+  background-color: #111;
+  border: 2px solid var(--leaf-green);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(134, 194, 50, 0.6);
+}
+
+.post-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 24px;
+}
+
+.post-title {
+  color: var(--leaf-green);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.post-description {
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+</style>
+
+{% endblock %}

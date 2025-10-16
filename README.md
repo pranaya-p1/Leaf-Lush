@@ -172,3 +172,18 @@ I also worked a bit on refining my homepage, such as the size and style of the b
 This week I installed and registered the service worker in order to test my webpage. I then did a Google Lighthouse report.
 ![alt text](image-12.png)
 I realised that that the performance of the webpage was lower than expected. The main feedback was to reduce the time it tkes for the largest image to lod. However, this was quite a minor issue and could be fixed by reducing the size of the image. Another insight was to reduce uneeded CSS and increase the contrast of the website. 
+
+## Instructions
+1. Load into VSCode
+2. Run main.py (Click play button at top right corner of page)
+3. Click the on the link to run webpage (e.g. http://127.0.0.1:5001)
+4. Login into webpage and enter details. 
+5. Open My Dashboard to Update Profile (Update username, profile picture, bio, description)
+6. At the end of your session, ensure you Logout. 
+
+
+
+## Acknowledgements
+- https://gardenbetty.com/ (Inspiration for Menu bar)
+- Co Pilot (To Fix bugs and errors in code)
+- https://gardenlife.com.au/?srsltid=AfmBOor0tueK5LKrzysNT1tOyAzjfVafXIucbKJpZq81TEIQzJ8Ucgnk (Inspiration for layout of Homepage)
